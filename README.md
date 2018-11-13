@@ -1,3 +1,6 @@
+[![](https://images.microbadger.com/badges/version/jerheij/spotweb.svg)](https://microbadger.com/images/jerheij/spotweb "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/jerheij/spotweb.svg)](https://microbadger.com/images/jerheij/spotweb "Get your own image badge on microbadger.com")
+
 An image running the latest [Alpine:latest](https://hub.docker.com/_/alpine/) build with PHP7 and [Spotweb](https://github.com/spotweb/spotweb).
 
 ## Requirements
