@@ -79,6 +79,7 @@ volumes:
 | `SSL`| Enable or disable SSL support in apache (enabled/disabled) | yes|
 |`UUID`| UID of the apache user, for mount and persistence compatibility | yes |
 |`GUID`| GID of the apache group, for mount and persistence compatibility| yes |
+|`VERSION`| Spotweb version, defaults to master branch but you can use a version tag from their [git](https://github.com/spotweb/spotweb) page | yes |
 
 ### Author
 Jerheij
