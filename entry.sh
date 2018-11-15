@@ -20,8 +20,6 @@ else
   git pull origin master
 fi
 
-chown -R apache: ${WebDir}
-
 echo
 
 case ${SSL} in
@@ -116,6 +114,7 @@ then
   find / -user ${OldGID} -exec chgrp -h apache {} \; &> /dev/null
 fi
 
+chown -R apache: ${WebDir}
 rm -rf /var/cache/apk/* && \
 
 echo "Deployment done!"
