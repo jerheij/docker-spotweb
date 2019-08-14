@@ -111,7 +111,7 @@ then
   echo "Replacing old apache GID with ${GUID}"
   OldGID=$(getent passwd apache | cut -d ':' -f4)
   groupmod -g ${GUID} apache
-  find / -user ${OldGID} -exec chgrp -h apache {} \; &> /dev/null
+  find / -group ${OldGID} -exec chgrp -h apache {} \; &> /dev/null
 fi
 
 chown -R apache: ${WebDir}
