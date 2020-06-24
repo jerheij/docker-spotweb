@@ -1,3 +1,7 @@
+ARG VCS_REF
+LABEL org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="https://github.com/jerheij/docker-spotweb"
+
 FROM docker.io/alpine:latest
 COPY entry.sh /entry.sh
 RUN apk update && \
