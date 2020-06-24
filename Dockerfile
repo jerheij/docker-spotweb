@@ -1,4 +1,4 @@
-FROM docker.io/alpine:latest
+FROM alpine:latest
 
 ARG VCS_REF
 LABEL org.label-schema.vcs-ref=$VCS_REF \
