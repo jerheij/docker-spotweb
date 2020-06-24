@@ -1,6 +1,6 @@
 FROM docker.io/alpine:latest
 
-sARG VCS_REF
+ARG VCS_REF
 LABEL org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.vcs-url="https://github.com/jerheij/docker-spotweb"
 
