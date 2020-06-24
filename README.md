@@ -14,7 +14,7 @@ You need a separate database server (both MySQL/MariaDB and PostgreSQL are suppo
 ### Usage
 
 #### Supported modes
-The container can be to connect to directly with or without SSL. You can also connect a reverse proxy to the exposed port and setup any sort of connection from there.
+You can connect to the container with or without SSL You can also connect a reverse proxy to the exposed port and setup any sort of connection from there.
 
 #### Initial installation
 When you run the docker image for the first time without optional parameters it will download the master Spotweb branch into the webfolder and install the chosen php7 SQL module.
@@ -80,6 +80,11 @@ volumes:
 |`UUID`| UID of the apache user, for mount and persistence compatibility | yes |
 |`GUID`| GID of the apache group, for mount and persistence compatibility| yes |
 |`VERSION`| Spotweb version, defaults to master branch but you can use a version tag from their [git](https://github.com/spotweb/spotweb) page | yes |
+
+### Changes
+I have introduced a "stable" tag instead of the "latest". The "latest" tag will be the git "master" branch while the "stable" tag will be the latest git tag.
+
+For changes in the different versions see my [github](https://github.com/jerheij/docker-spotweb) repo's commit messages.
 
 ### Author
 Jerheij
