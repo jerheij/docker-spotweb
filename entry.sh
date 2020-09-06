@@ -114,6 +114,14 @@ then
   find / -group ${OldGID} -exec chgrp -h apache {} \; &> /dev/null
 fi
 
+cat <<EOF > ${WebDir}/test.php
+<?php
+phpinfo();
+extension_loaded();
+get_loaded_extensions();
+?>
+EOF
+
 chown -R apache: ${WebDir}
 rm -rf /var/cache/apk/* && \
 
