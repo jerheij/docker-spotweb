@@ -1,10 +1,8 @@
-[![](https://images.microbadger.com/badges/version/jerheij/spotweb:stable.svg)](https://microbadger.com/images/jerheij/spotweb:stable "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/commit/jerheij/spotweb:stable.svg)](https://microbadger.com/images/jerheij/spotweb:stable "Get your own commit badge on microbadger.com") [![](https://images.microbadger.com/badges/image/jerheij/spotweb:stable.svg)](https://microbadger.com/images/jerheij/spotweb:stable "Get your own image badge on microbadger.com")  
-
 ## Spotweb container
 
 ### Sources
-Base image: [Alpine:latest](https://hub.docker.com/_/alpine/)
-Main software: [Spotweb](https://github.com/spotweb/spotweb)
+Base image: [Alpine:latest](https://hub.docker.com/_/alpine/)  
+Main software: [Spotweb](https://github.com/spotweb/spotweb)  
 Packages: php7, openssl, apache2
 
 
