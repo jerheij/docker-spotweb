@@ -1,0 +1,33 @@
+kind: pipeline
+name: default
+
+steps:
+- name: docker-tag-build
+  image: plugins/docker
+  settings:
+    username:
+      from_secret: DOCKER_USERNAME
+    password:
+      from_secret: DOCKER_PASSWORD
+    repo: jerheij/spotweb
+    no_cache: true
+    tags: ${DRONE_TAG}
+  when:
+    event:
+      - tag
+
+- name: docker-latest-build
+  image: plugins/spotweb
+  settings:
+    username:
+      from_secret: DOCKER_USERNAME
+    password:
+      from_secret: DOCKER_PASSWORD
+    repo: jerheij/proxy
+    no_cache: true
+    tags: latest
+  when:
+    event:
+      - push
+    branch:
+      - master
