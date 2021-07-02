@@ -17,7 +17,7 @@ steps:
       - tag
 
 - name: docker-latest-build
-  image: plugins/spotweb
+  image: plugins/docker
   settings:
     username:
       from_secret: DOCKER_USERNAME
