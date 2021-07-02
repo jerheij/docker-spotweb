@@ -23,7 +23,7 @@ steps:
       from_secret: DOCKER_USERNAME
     password:
       from_secret: DOCKER_PASSWORD
-    repo: jerheij/proxy
+    repo: jerheij/spotweb
     no_cache: true
     tags: latest
   when:
