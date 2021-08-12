@@ -22,18 +22,16 @@ fi
 echo
 
 # Create the Retrieve cron entry
-
-
 if [[ -n "$SPOTWEB_CRON_RETRIEVE" || -n "$SPOTWEB_CRON_CACHE_CHECK" ]]
 then
   echo "Scheduling tasks....."
 	if [[ -n "$SPOTWEB_CRON_RETRIEVE" ]]; then
-       echo "Creating crontab entry for Retrieve with schedule:  $SPOTWEB_CRON_RETRIEVE"
-       echo "$SPOTWEB_CRON_RETRIEVE /usr/bin/php /var/www/spotweb/retrieve.php >/var/log/stdout 2>&1" > /etc/crontabs/root
+    echo "Creating crontab entry for Retrieve with schedule:  $SPOTWEB_CRON_RETRIEVE"
+    echo "$SPOTWEB_CRON_RETRIEVE /usr/bin/php /var/www/spotweb/retrieve.php >/var/log/stdout 2>&1" > /etc/crontabs/root
 	fi
 	if [[ -n "$SPOTWEB_CRON_CACHE_CHECK" ]]; then
-       echo "Creating crontab entry for check-cache with schedule:  $SPOTWEB_CRON_CACHE_CHECK"
-	   echo "$SPOTWEB_CRON_CACHE_CHECK /usr/bin/php /var/www/spotweb/bin/check-cache.php >/var/log/stdout 2>&1" >> /etc/crontabs/root
+    echo "Creating crontab entry for check-cache with schedule:  $SPOTWEB_CRON_CACHE_CHECK"
+    echo "$SPOTWEB_CRON_CACHE_CHECK /usr/bin/php /var/www/spotweb/bin/check-cache.php >/var/log/stdout 2>&1" >> /etc/crontabs/root
 	fi
 fi
 
