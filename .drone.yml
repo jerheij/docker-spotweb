@@ -31,3 +31,39 @@ steps:
       - push
     branch:
       - master
+
+- name: docker-stable-build
+  image: plugins/docker
+  settings:
+    username:
+      from_secret: DOCKER_USERNAME
+    password:
+      from_secret: DOCKER_PASSWORD
+    repo: jerheij/proxy
+    no_cache: true
+    tags: stable
+  when:
+    event:
+      - cron
+      - push
+    branch:
+      - stable
+
+- name: email_notification
+  image: drillster/drone-email
+  settings:
+    host: 192.168.169.3
+    port: 25
+    subject: "Drone Build {{repo.name}}/{{commit.branch}} {{tag}} {{build.status}}"
+    body: >
+      {{build.link}}
+    from:
+      from_secret: EMAIL_FROM
+    recipients:
+      from_secret: EMAIL_TO
+    recipients_only: true
+  when:
+    event:
+      - tag
+      - push
+      - cron
