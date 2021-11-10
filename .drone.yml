@@ -63,7 +63,4 @@ steps:
       from_secret: EMAIL_TO
     recipients_only: true
   when:
-    event:
-      - tag
-      - push
-      - cron
+    status: [ success, changed, failure ]
