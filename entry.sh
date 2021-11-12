@@ -31,7 +31,7 @@ then
 	fi
 	if [[ -n "$SPOTWEB_CRON_CACHE_CHECK" ]]; then
     echo "Creating crontab entry for check-cache with schedule:  $SPOTWEB_CRON_CACHE_CHECK"
-    echo "$SPOTWEB_CRON_CACHE_CHECK /usr/bin/php /var/www/spotweb/bin/check-cache.php >/var/log/stdout 2>&1" >> /etc/crontabs/root
+    echo "$SPOTWEB_CRON_CACHE_CHECK /usr/bin/php /var/www/spotweb/bin/check-cache.php >/var/log/stdout 2>&1" >> /etc/crontabs/apache
 	fi
 fi
 
