@@ -22,7 +22,7 @@ fi
 # make sure cache directory exists prior to executing chown -R apache: ${WebDir}
 # if cache dir does not exists, it is created by root user on first retrieve and result in a database error
 
-mkdir cache
+mkdir ${WebDir}/cache
 
 echo
 
