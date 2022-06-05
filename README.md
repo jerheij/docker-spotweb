@@ -1,7 +1,7 @@
 ## Spotweb container
 
 ### Sources
-Base image: [Alpine:latest](https://hub.docker.com/_/alpine/)  
+Base image: [Alpine:3.15](https://hub.docker.com/_/alpine/)  
 Main software: [Spotweb](https://github.com/spotweb/spotweb)  
 Packages: php7, openssl, apache2
 
