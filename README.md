@@ -72,8 +72,8 @@ volumes:
 ### Variables
 | Variable | Function | Optional |
 | --- | --- | --- |
-| `TZ` | Timezone for PHP and OS configuration (defaults to UTC) | no |
 | `SQL`| SQL type for Spotweb (sqlite, psql or mysql) | no |
+| `TZ` | Timezone for PHP and OS configuration (defaults to UTC) | yes |
 | `SSL`| Enable or disable SSL support in apache (enabled/disabled) | yes|
 |`UUID`| UID of the apache user, for mount and persistence compatibility | yes |
 |`GUID`| GID of the apache group, for mount and persistence compatibility| yes |
