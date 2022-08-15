@@ -10,6 +10,10 @@ git init ${WebDir}
 cd ${WebDir}
 git remote add origin https://github.com/spotweb/spotweb.git
 
+echo
+echo "Using the following timezone: ${TZ}"
+echo
+
 if [[ ! -z ${VERSION} ]]
 then
   echo "Downloading Spotweb ${VERSION}:"
