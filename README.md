@@ -72,14 +72,14 @@ volumes:
 ### Variables
 | Variable | Function | Optional |
 | --- | --- | --- |
-| `TZ` | Timezone for PHP configuration | no |
+| `TZ` | Timezone for PHP and OS configuration (defaults to UTC) | no |
 | `SQL`| SQL type for Spotweb (sqlite, psql or mysql) | no |
 | `SSL`| Enable or disable SSL support in apache (enabled/disabled) | yes|
 |`UUID`| UID of the apache user, for mount and persistence compatibility | yes |
 |`GUID`| GID of the apache group, for mount and persistence compatibility| yes |
 |`VERSION`| Spotweb version, defaults to master branch but you can use a version tag from their [git](https://github.com/spotweb/spotweb) page | yes |
-|`SPOTWEB_CRON_RETRIEVE`| Installs a cronjob within the container for running a retrieve task. Requires a variable in crontab format. | yes |
-|`SPOTWEB_CRON_CACHE_CHECK`| Installs a cronjob within the container for running a cache check task. Requires a variable in crontab format. | yes |
+|`SPOTWEB_CRON_RETRIEVE`| Installs a cronjob within the container for running a retrieve task. The command is pre-defined, it only requires a [cron formatted variable](https://codebeautify.org/crontab-format) to define when to run. | yes |
+|`SPOTWEB_CRON_CACHE_CHECK`| Installs a cronjob within the container for running a cache check task. The command is pre-defined, it only requires a [cron formatted variable](https://codebeautify.org/crontab-format) to define when to run. | yes |
 
 ### Changes
 I have introduced a "stable" tag instead of the "latest". The "latest" tag will be the git "master" branch while the "stable" tag will be the latest git tag.
