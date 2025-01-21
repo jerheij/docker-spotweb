@@ -52,8 +52,10 @@ steps:
 - name: email_notification
   image: drillster/drone-email
   settings:
-    host: 192.168.169.3
-    port: 25
+    host:
+      from_secret: SMTP_HOST
+    port:
+      from_secret: SMTP_PORT
     subject: "Drone Build {{repo.name}}/{{commit.branch}} {{tag}} {{build.status}}"
     body: >
       {{build.link}}
